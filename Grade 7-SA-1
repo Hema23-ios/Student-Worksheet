@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a href="Chart.xlsx"> Chart</a>
+
+Answer the following
+Perform the activities related to Sorting Data, Number Formatting, and Chart Creation as shown in the given table: 
+Using the given table, complete the following steps:
+a) Sort the data by the Salesperson column in ascending (A–Z) order using the Custom Sort feature and Select the entire data table and apply All Borders, then apply a Thick Outside Border to outline the table clearly.
+b) Apply the following Number Formatting to the specified columns:
+•	Total Revenue: Currency
+•	Units Sold: Number
+•	Order Date: Short Date
+•	Transaction Time: Time
+•	Discount Rate: Percentage (with 1 decimal place)
+c) Create a chart to compare the Total Revenue for each Product Category, and complete the following within the chart:
+1.	Identify and indicate the Product Category with the highest Total Revenue.
+2.	Add a clear title to the chart.
+3.	Label the X-axis and Y-axis appropriately.
+4.	Apply a pre-set Chart Style of your choice for better visual presentation.
+</body>
+</html>
