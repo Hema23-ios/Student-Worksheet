@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sales Data Summary</title>
+<title>Sales Data Report</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
     body { font-family: Arial, sans-serif; margin: 40px; }
@@ -14,59 +14,78 @@
 </head>
 <body>
 
-<h1>Sales Data Table (Sorted by Salesperson A–Z)</h1>
+<h1>Sales Data (Sorted by Salesperson A–Z)</h1>
 
 <table class="thick-border">
     <thead>
         <tr>
-            <th>Salesperson</th>
+            <th>Emp ID</th>
             <th>Product Category</th>
-            <th>Units Sold (Number)</th>
-            <th>Total Revenue (Currency)</th>
+            <th>Salesperson</th>
             <th>Order Date (Short Date)</th>
             <th>Transaction Time (Time)</th>
+            <th>Units Sold (Number)</th>
+            <th>Unit Price</th>
+            <th>Total Revenue (Currency)</th>
             <th>Discount Rate (Percentage)</th>
         </tr>
     </thead>
     <tbody>
-        <!-- Replace this sample data with your sorted and formatted Excel data -->
         <tr>
-            <td>Alicia</td>
+            <td>1005</td>
+            <td>Apparel</td>
+            <td>Davis</td>
+            <td>10/03/2025</td>
+            <td>15:32</td>
+            <td>60</td>
+            <td>32.5</td>
+            <td>$1950.00</td>
+            <td>15.0%</td>
+        </tr>
+        <tr>
+            <td>1001</td>
             <td>Electronics</td>
-            <td>120</td>
-            <td>$18,000.00</td>
-            <td>01/15/2025</td>
-            <td>10:45 AM</td>
+            <td>Johnson</td>
+            <td>16/04/2025</td>
+            <td>18:00</td>
+            <td>15</td>
+            <td>250</td>
+            <td>$3750.00</td>
             <td>5.0%</td>
         </tr>
         <tr>
-            <td>Brian</td>
-            <td>Furniture</td>
-            <td>75</td>
-            <td>$22,500.00</td>
-            <td>01/17/2025</td>
-            <td>01:20 PM</td>
-            <td>7.5%</td>
+            <td>1004</td>
+            <td>Electronics</td>
+            <td>Johnson</td>
+            <td>05/04/2025</td>
+            <td>14:20</td>
+            <td>22</td>
+            <td>250</td>
+            <td>$5500.00</td>
+            <td>5.0%</td>
         </tr>
         <tr>
-            <td>Carla</td>
-            <td>Office Supplies</td>
-            <td>200</td>
-            <td>$12,000.00</td>
-            <td>01/18/2025</td>
-            <td>09:10 AM</td>
-            <td>3.5%</td>
+            <td>1003</td>
+            <td>Home Goods</td>
+            <td>Miller</td>
+            <td>01/02/2025</td>
+            <td>16:00</td>
+            <td>8</td>
+            <td>150.5</td>
+            <td>$1204.00</td>
+            <td>10.0%</td>
         </tr>
-        <tr style="background-color: #d1ffd1; font-weight: bold;">
-            <td>Daniel</td>
-            <td>Furniture</td>
-            <td>150</td>
-            <td>$45,000.00</td>
-            <td>01/19/2025</td>
-            <td>11:00 AM</td>
-            <td>6.0%</td>
+        <tr>
+            <td>1002</td>
+            <td>Apparel</td>
+            <td>Williams</td>
+            <td>20/01/2025</td>
+            <td>12:43</td>
+            <td>45</td>
+            <td>45.99</td>
+            <td>$2069.55</td>
+            <td>0%</td>
         </tr>
-        <!-- Highest revenue row highlighted -->
     </tbody>
 </table>
 
@@ -74,14 +93,10 @@
 <canvas id="revenueChart" width="600" height="350"></canvas>
 
 <script>
-// Replace with your real categories and revenue totals
-const categories = ["Electronics", "Furniture", "Office Supplies"];
-const revenue = [18000, 67500, 12000]; // Furniture is highest here
+const categories = ["Apparel", "Electronics", "Home Goods"];
+const revenue = [4019.55, 9250, 1204];
 
-const highestIndex = revenue.indexOf(Math.max(...revenue));
-
-const ctx = document.getElementById("revenueChart");
-new Chart(ctx, {
+new Chart(document.getElementById("revenueChart"), {
     type: "bar",
     data: {
         labels: categories,
@@ -96,19 +111,6 @@ new Chart(ctx, {
             title: {
                 display: true,
                 text: "Total Revenue Comparison by Product Category"
-            },
-            tooltip: {
-                enabled: true
-            },
-            annotation: {
-                annotations: {
-                    highlight: {
-                        type: "box",
-                        xMin: highestIndex - 0.4,
-                        xMax: highestIndex + 0.4,
-                        backgroundColor: "rgba(255,215,0,0.3)"
-                    }
-                }
             }
         },
         scales: {
@@ -118,6 +120,8 @@ new Chart(ctx, {
     }
 });
 </script>
+
+<p><strong>Highest Revenue Category:</strong> Electronics ✅</p>
 
 </body>
 </html>
