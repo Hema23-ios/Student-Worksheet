@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
 <meta charset="UTF-8">
 <title>Sales Data Report</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -12,9 +13,10 @@
     h2 { margin-top: 40px; }
 </style>
 </head>
+    
 <body>
 
-<h1>Sales Data (Sorted by Salesperson A–Z)</h1>
+<h3>Perform the activities related to Sorting Data, Number Formatting, and Chart Creation as shown in the given table:</h3>
 
 <table class="thick-border">
     <thead>
@@ -89,39 +91,32 @@
     </tbody>
 </table>
 
-<h2>Total Revenue by Product Category</h2>
-<canvas id="revenueChart" width="600" height="350"></canvas>
 
-<script>
-const categories = ["Apparel", "Electronics", "Home Goods"];
-const revenue = [4019.55, 9250, 1204];
+<body>
 
-new Chart(document.getElementById("revenueChart"), {
-    type: "bar",
-    data: {
-        labels: categories,
-        datasets: [{
-            label: "Total Revenue ($)",
-            data: revenue,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        plugins: {
-            title: {
-                display: true,
-                text: "Total Revenue Comparison by Product Category"
-            }
-        },
-        scales: {
-            x: { title: { display: true, text: "Product Category" } },
-            y: { title: { display: true, text: "Total Revenue ($)" } }
-        }
-    }
-});
-</script>
+<h2>Using the given table, complete the following steps:</h2>
 
-<p><strong>Highest Revenue Category:</strong> Electronics ✅</p>
+<h3>a) Sorting and Borders</h3>
+<p>Sort the data by the <strong>Salesperson</strong> column in ascending (A–Z) order using the <strong>Custom Sort</strong> feature. Then select the entire data table and apply <strong>All Borders</strong>. After that, apply a <strong>Thick Outside Border</strong> to outline the table clearly.</p>
+
+<h3>b) Number Formatting</h3>
+<p>Apply the following number formatting to the specified columns:</p>
+<ul>
+    <li><strong>Total Revenue:</strong> Currency</li>
+    <li><strong>Units Sold:</strong> Number</li>
+    <li><strong>Order Date:</strong> Short Date</li>
+    <li><strong>Transaction Time:</strong> Time</li>
+    <li><strong>Discount Rate:</strong> Percentage (with 1 decimal place)</li>
+</ul>
+
+<h3>c) Chart Creation</h3>
+<p>Create a chart to compare the <strong>Total Revenue</strong> for each <strong>Product Category</strong>. Within the chart, complete the following:</p>
+<ol>
+    <li>Identify and indicate the <strong>Product Category with the highest Total Revenue</strong>.</li>
+    <li>Add a <strong>clear title</strong> to the chart.</li>
+    <li>Label the <strong>X-axis</strong> and <strong>Y-axis</strong> appropriately.</li>
+    <li>Apply a <strong>pre-set Chart Style</strong> of your choice for better visual presentation.</li>
+</ol>
 
 </body>
 </html>
