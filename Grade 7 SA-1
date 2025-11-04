@@ -50,18 +50,22 @@
     <strong>Chart Creation</strong> as shown in the given table:
   </h2>
 
-  <div class="outer-border">
-    <table>
+
+  <head>
+    <title>Sales Data</title>
+  </head>
+  <body>
+    <table border="1">
       <tr>
-        <th>Emp ID</th>
-        <th>Product Category</th>
-        <th>Salesperson</th>
-        <th>Order Date</th>
-        <th>Transaction Time</th>
-        <th>Units Sold</th>
-        <th>Unit Price</th>
-        <th>Total Revenue</th>
-        <th>Discount Rate</th>
+        <td>Emp ID</td>
+        <td>Product Category</td>
+        <td>Salesperson</td>
+        <td>Order Date</td>
+        <td>Transaction Time</td>
+        <td>Units Sold</td>
+        <td>Unit Price</td>
+        <td>Total Revenue</td>
+        <td>Discount Rate</td>
       </tr>
       <tr>
         <td>1001</td>
@@ -119,7 +123,7 @@
         <td>0.15</td>
       </tr>
     </table>
-  </div>
+ </body>
 
 
 
