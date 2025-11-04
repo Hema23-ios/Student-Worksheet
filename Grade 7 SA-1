@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Data, Number Formatting, and Chart Creation Activity</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f7f9fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #444;
+      border-radius: 10px;
+      max-width: 90%;
+      height: auto;
+    }
+    .instructions {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ol, ul {
+      margin-left: 30px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sorting Data, Number Formatting, and Chart Creation</h1>
+
+  <!-- Image Section -->
+  <img src="af37d6a8-3286-4fb9-9f05-f66e3ae31e6b.png" alt="Data Table">
+
+  <!-- Instructions Section -->
+  <div class="instructions">
+    <p><strong>Perform the activities related to <em>Sorting Data, Number Formatting, and Chart Creation</em> as shown in the given table:</strong></p>
+
+    <p><strong>Using the given table, complete the following steps:</strong></p>
+
+    <ol>
+      <li><strong>Sort the data:</strong><br>
+        Sort the data by the <b>Salesperson</b> column in ascending (A–Z) order using the Custom Sort feature.<br>
+        Select the entire data table and apply <b>All Borders</b>, then apply a <b>Thick Outside Border</b> to outline the table clearly.
+      </li>
+
+      <li><strong>Apply Number Formatting:</strong>
+        <ul>
+          <li><b>Total Revenue:</b> Currency</li>
+          <li><b>Units Sold:</b> Number</li>
+          <li><b>Order Date:</b> Short Date</li>
+          <li><b>Transaction Time:</b> Time</li>
+          <li><b>Discount Rate:</b> Percentage (with 1 decimal place)</li>
+        </ul>
+      </li>
+
+      <li><strong>Create a Chart:</strong><br>
+        Create a chart to compare the <b>Total Revenue</b> for each <b>Product Category</b>, and complete the following within the chart:
+        <ol type="1">
+          <li>Identify and indicate the Product Category with the highest Total Revenue.</li>
+          <li>Add a clear title to the chart.</li>
+          <li>Label the X-axis and Y-axis appropriately.</li>
+          <li>Apply a pre-set Chart Style of your choice for better visual presentation.</li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
