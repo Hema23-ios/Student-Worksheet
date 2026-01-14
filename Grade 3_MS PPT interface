@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grade 3 - PowerPoint Quiz</title>
-  <style>
-    body {
-      font-family: Arial;
-      background-color: #e8f0fe;
-      padding: 20px;
-    }
-    .box {
-      background: white;
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    h1 {
-      text-align: center;
-      color: #1a73e8;
-    }
-    button {
-      padding: 10px 15px;
-      background: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-  </style>
+  <title>Grade 3 – PowerPoint Quiz</title>
 </head>
 
-<body>
-  <div class="box">
-    <h1>PowerPoint Quiz</h1>
-    <p><b>Grade:</b> 3A</p>
-    <p><b>Time:</b> 10 Minutes</p>
+<body style="font-family:Arial; background:#eef3ff;">
 
-    <form>
-      <p>1. What is the top bar called?</p>
-      <input type="radio"> Title Bar<br>
-      <input type="radio"> Slide Pane<br><br>
+<div style="background:white; max-width:600px; margin:auto; padding:20px; border-radius:10px;">
 
-      <p>2. Where are Tabs and Groups?</p>
-      <input type="radio"> Ribbon<br>
-      <input type="radio"> Zoom<br><br>
+<h2 style="text-align:center;">Grade 3 – PowerPoint Interface Quiz</h2>
+<p style="text-align:center;"><b>Time:</b> 10 Minutes</p>
 
-      <p>3. Which part shows slides?</p>
-      <input type="radio"> Slide Pane<br>
-      <input type="radio"> Title Bar<br><br>
+<!-- Student Name -->
+<label><b>Student Name:</b></label><br>
+<input type="text" placeholder="Enter your name" style="width:100%; padding:8px;"><br><br>
 
-      <p>4. Zoom option helps us to:</p>
-      <input type="radio"> Make slide bigger or smaller<br>
-      <input type="radio"> Add pictures<br><br>
+<hr>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+<!-- Quiz Questions -->
+<p>1. What is the top bar called?</p>
+<input type="radio" name="q1"> Title Bar<br>
+<input type="radio" name="q1"> Slide Pane<br><br>
+
+<p>2. Where are Tabs and Groups?</p>
+<input type="radio" name="q2"> Ribbon<br>
+<input type="radio" name="q2"> Zoom<br><br>
+
+<p>3. Which part shows slides?</p>
+<input type="radio" name="q3"> Slide Pane<br>
+<input type="radio" name="q3"> Title Bar<br><br>
+
+<p>4. Zoom helps to:</p>
+<input type="radio" name="q4"> Make slide bigger or smaller<br>
+<input type="radio" name="q4"> Add pictures<br><br>
+
+<button style="padding:10px 20px;">Submit</button>
+
+<hr>
+
+<!-- Worksheet Download -->
+<h3>Worksheet</h3>
+<a href="https://github.com/Hema23-ios/Student-Worksheet/raw/main/grade_3.xlsx"
+   download
+   style="font-size:18px; color:#0078D7; text-decoration:none;">
+   📥 Download Grade 3 – PPT Interface Worksheet
+</a>
+
+</div>
+
 </body>
 </html>
