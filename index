@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Grade-7</title>
+  <title>Grade 3 - PowerPoint Quiz</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #e8f0fe;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #1a73e8;
+    }
+    button {
+      padding: 10px 15px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
 
-  <h1 style="color:#0078D7;">Grade7_SA1</h1>
+<body>
+  <div class="box">
+    <h1>PowerPoint Quiz</h1>
+    <p><b>Grade:</b> 3A</p>
+    <p><b>Time:</b> 10 Minutes</p>
 
-
-<a href="https://github.com/Hema23-ios/Student-Worksheet/raw/main/grade_7.xlsx"  
-    download
-    style="font-size:20px; color:#0078D7; text-decoration:none;">
-  <u> Grade 7-SA_1 </u>
-</a>
-
-</body>
-</html>
+    <form>
+      <p>1. What is the top bar called?</p>
+      <input type="radio"> Title
