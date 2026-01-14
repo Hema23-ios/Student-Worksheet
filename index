@@ -37,4 +37,23 @@
 
     <form>
       <p>1. What is the top bar called?</p>
-      <input type="radio"> Title
+      <input type="radio"> Title Bar<br>
+      <input type="radio"> Slide Pane<br><br>
+
+      <p>2. Where are Tabs and Groups?</p>
+      <input type="radio"> Ribbon<br>
+      <input type="radio"> Zoom<br><br>
+
+      <p>3. Which part shows slides?</p>
+      <input type="radio"> Slide Pane<br>
+      <input type="radio"> Title Bar<br><br>
+
+      <p>4. Zoom option helps us to:</p>
+      <input type="radio"> Make slide bigger or smaller<br>
+      <input type="radio"> Add pictures<br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
