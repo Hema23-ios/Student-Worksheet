@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Worksheets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            background-color: #f0f2f5; /* Change this to any color you like */
+            font-family: 'Segoe UI', sans-serif;
+            display: flex; flex-direction: column; align-items: center; padding: 50px;
+        }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 80%; max-width: 800px; }
+        h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .folder-list { list-style: none; padding: 0; }
+        .folder-item { 
+            display: flex; align-items: center; padding: 15px; border-radius: 8px;
+            text-decoration: none; color: #444; transition: 0.2s;
+        }
+        .folder-item:hover { background-color: #e7f3ff; color: #007bff; }
+        .folder-item i { font-size: 24px; margin-right: 15px; color: #ffca28; /* Folder Yellow */ }
+        .file-item i { color: #2196f3; /* File Blue */ }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Worksheets Library</h1>
+        <div class="folder-list">
+            <a href="./Grade 3/" class="folder-item"><i class="fas fa-folder"></i> Grade 3 Resources</a>
+            <a href="./Grade 5/" class="folder-item"><i class="fas fa-folder"></i> Grade 5 Resources</a>
+            <a href="./Grade 7/" class="folder-item"><i class="fas fa-folder"></i> Grade 7 Resources</a>
+            
+            <a href="./Excel-1.xlsx" class="folder-item file-item"><i class="fas fa-file-excel"></i> Activity Chart (Excel)</a>
+        </div>
+    </div>
+</body>
+</html>
