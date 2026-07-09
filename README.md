@@ -5,4 +5,5 @@
  Select a Grade:
 * [Grade 3](./Grade%203/)
 * [Grade 5](./Grade%205/)
-* [Grade 7](./Grade%207/) </a>
+* [Grade 7](./Grade%207/)
+* [Stars 1](./Grade%207/) </a>
