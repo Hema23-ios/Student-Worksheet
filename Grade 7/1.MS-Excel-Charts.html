@@ -41,31 +41,6 @@
 
     header h1 { margin: 0; }
 
-    /* Navigation */
-    .nav-tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      background-color: white;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      padding: 10px 18px;
-      font-weight: bold;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .tab-btn.active, .tab-btn:hover {
-      background-color: var(--primary);
-      color: white;
-    }
-
     .section {
       display: none;
       background: var(--card-bg);
@@ -93,7 +68,7 @@
 
     .chart-card h3 { margin-top: 0; color: var(--secondary); }
 
-    /* SVG Diagram Styling for Part 1 & Part 2 */
+    /* SVG Diagram Styling */
     .chart-graphic {
       width: 100%;
       height: 150px;
@@ -170,6 +145,65 @@
       margin-bottom: 20px;
       color: var(--secondary);
     }
+
+    /* Navigation Action Buttons */
+    .nav-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e1dfdd;
+    }
+
+    .next-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #0c5c30;
+      transform: translateY(-2px);
+    }
+
+    /* Summary Card Styling */
+    .summary-card {
+      background: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .summary-score-box {
+      background: #faf9f8;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .score-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      padding: 8px 0;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    .score-total {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
@@ -178,13 +212,6 @@
   <header>
     <h1>Grade 7: Microsoft Excel Charts</h1>
   </header>
-
-  <!-- Navigation Tabs -->
-  <div class="nav-tabs">
-    <button class="tab-btn active" onclick="showSection('part1')">Part 1: Explore Charts</button>
-    <button class="tab-btn" onclick="showSection('part2')">Part 2: Chart Identification Quiz</button>
-    <button class="tab-btn" onclick="showSection('part3')">Part 3: Scenario Challenge</button>
-  </div>
 
   <!-- SECTION 1: PART 1 EXPLORE -->
   <div id="part1" class="section active">
@@ -292,6 +319,11 @@
         <p><strong>Scenario:</strong> Plotting height (cm) versus weight (kg) to see if taller students weigh more.</p>
       </div>
 
+    </div>
+
+    <!-- Next Button at bottom of Part 1 -->
+    <div class="nav-actions">
+      <button class="next-btn" onclick="goToSection('part2')">Next: Part 2 (Quiz) ➔</button>
     </div>
   </div>
 
@@ -443,6 +475,11 @@
       <div class="feedback"></div>
     </div>
 
+    <!-- Next Button at bottom of Part 2 -->
+    <div class="nav-actions">
+      <button class="next-btn" onclick="goToSection('part3')">Next: Part 3 (Scenarios) ➔</button>
+    </div>
+
   </div>
 
   <!-- SECTION 3: PART 3 SCENARIOS (7 QUESTIONS) -->
@@ -534,17 +571,55 @@
       <div class="feedback"></div>
     </div>
 
+    <!-- Finish Button at bottom of Part 3 -->
+    <div class="nav-actions">
+      <button class="next-btn" onclick="goToSection('final-summary')">Finish & View Final Score ➔</button>
+    </div>
+
   </div>
+
+  <!-- SECTION 4: FINAL RESULTS DISPLAY -->
+  <div id="final-summary" class="section">
+    <div class="summary-card">
+      <h2>🎉 Activity Completed!</h2>
+      <p>Here is your total score summary across both quiz sections:</p>
+
+      <div class="summary-score-box">
+        <div class="score-row">
+          <span>Part 2: Chart Identification</span>
+          <span id="final-score-p2">0 / 7</span>
+        </div>
+        <div class="score-row">
+          <span>Part 3: Scenario Challenge</span>
+          <span id="final-score-p3">0 / 7</span>
+        </div>
+        <div class="score-total">
+          Total Score: <span id="final-score-total">0 / 14</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 25px;">
+        <button class="next-btn" onclick="goToSection('part1')">🔄 Restart Activity</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
-  // Section Navigation
-  function showSection(sectionId) {
+  // Navigation function
+  function goToSection(sectionId) {
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    
     document.getElementById(sectionId).classList.add('active');
-    event.currentTarget.classList.add('active');
+    
+    // Update summary scores if going to final summary screen
+    if (sectionId === 'final-summary') {
+      document.getElementById('final-score-p2').innerText = `${scores.part2} / 7`;
+      document.getElementById('final-score-p3').innerText = `${scores.part3} / 7`;
+      document.getElementById('final-score-total').innerText = `${scores.part2 + scores.part3} / 14`;
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // Scoring Tracker
