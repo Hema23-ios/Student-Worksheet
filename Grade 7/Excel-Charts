@@ -1,1 +1,418 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 7 MS Excel Charts Interactive Lesson</title>
+  <style>
+    :root {
+      --primary: #107c41; /* Excel Green */
+      --primary-dark: #0b572e;
+      --secondary: #2b579a;
+      --bg: #f3f2f1;
+      --card-bg: #ffffff;
+      --text: #323130;
+      --correct: #107c41;
+      --wrong: #d13438;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background-color: white;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .section {
+      display: none;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .time-badge {
+      display: inline-block;
+      background: #e1dfdd;
+      color: #323130;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Part 1 Cards */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .chart-card {
+      border: 1px solid #e1dfdd;
+      border-radius: 8px;
+      padding: 20px;
+      background: #faf9f8;
+      border-left: 5px solid var(--primary);
+    }
+
+    .chart-card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+    }
+
+    .visual-box {
+      background: #eef3f7;
+      border: 2px dashed var(--secondary);
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+
+    /* Quiz Styling */
+    .quiz-card {
+      border: 1px solid #e1dfdd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #ffffff;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .options-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .option-btn {
+      background: #f3f2f1;
+      border: 1px solid #8a8886;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    .option-btn:hover {
+      background: #e1dfdd;
+    }
+
+    .feedback {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: none;
+    }
+
+    .feedback.correct {
+      display: block;
+      background-color: #dff6dd;
+      color: var(--correct);
+      border: 1px solid var(--correct);
+    }
+
+    .feedback.wrong {
+      display: block;
+      background-color: #fde7e9;
+      color: var(--wrong);
+      border: 1px solid var(--wrong);
+    }
+
+    .score-board {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Microsoft Excel Charts Interactive Guide</h1>
+    <p>Grade 7 Computer Studies</p>
+  </header>
+
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="showPart('part1')">Part 1: Explore Charts</button>
+    <button class="tab-btn" onclick="showPart('part2')">Part 2: Visual Quiz (MCQ)</button>
+    <button class="tab-btn" onclick="showPart('part3')">Part 3: Scenario Challenge</button>
+  </div>
+
+  <!-- PART 1: EXPLORE CHARTS -->
+  <div id="part1" class="section active">
+    <span class="time-badge">⏱️ Suggested Time: 5 to 7 Minutes</span>
+    <h2>Explore Excel Chart Types & Their Uses</h2>
+    <p>Read through each chart type carefully to understand when and why we use them in real life.</p>
+    
+    <div class="grid-container">
+      <div class="chart-card">
+        <h3>1. Column Chart</h3>
+        <div class="visual-box"> Vertical Bars 📊</div>
+        <p><strong>Best For:</strong> Comparing values across categories.</p>
+        <p><strong>Real Scenario:</strong> Comparing the number of students in Grade 6, Grade 7, and Grade 8.</p>
+      </div>
+
+      <div class="chart-card">
+        <h3>2. Bar Chart</h3>
+        <div class="visual-box"> Horizontal Bars 📈 (Horizontal)</div>
+        <p><strong>Best For:</strong> Comparing categories when category names are long or text-heavy.</p>
+        <p><strong>Real Scenario:</strong> Comparing total votes for candidates with long names in a school election.</p>
+      </div>
+
+      <div class="chart-card">
+        <h3>3. Line Chart</h3>
+        <div class="visual-box"> Connected Lines 📈</div>
+        <p><strong>Best For:</strong> Showing trends or changes continuously over time.</p>
+        <p><strong>Real Scenario:</strong> Tracking daily temperatures in your city over a full week.</p>
+      </div>
+
+      <div class="chart-card">
+        <h3>4. Pie Chart</h3>
+        <div class="visual-box"> Circular Slices 🍕</div>
+        <p><strong>Best For:</strong> Displaying proportions or percentages of a whole (must total 100%).</p>
+        <p><strong>Real Scenario:</strong> Showing the proportion of your daily allowance spent on food, books, and savings.</p>
+      </div>
+
+      <div class="chart-card">
+        <h3>5. Area Chart</h3>
+        <div class="visual-box"> Filled Lines 🏔️</div>
+        <p><strong>Best For:</strong> Emphasizing the magnitude of change over time.</p>
+        <p><strong>Real Scenario:</strong> Showing total energy consumption of a building month-by-month over a year.</p>
+      </div>
+
+      <div class="chart-card">
+        <h3>6. Scatter (X Y) Chart</h3>
+        <div class="visual-box"> Plotted Dots 🌌</div>
+        <p><strong>Best For:</strong> Showing relationships or correlations between two numeric datasets.</p>
+        <p><strong>Real Scenario:</strong> Comparing students' height (cm) versus their weight (kg) to see if there is a pattern.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PART 2: VISUAL MCQ -->
+  <div id="part2" class="section">
+    <span class="time-badge">⏱️ Suggested Time: 5 to 6 Minutes</span>
+    <h2>Part 2: Identify the Chart Type</h2>
+    <div class="score-board" id="score-part2">Score: 0 / 4</div>
+
+    <!-- Question 1 -->
+    <div class="quiz-card" id="p2q1">
+      <p><strong>Question 1:</strong> You see a chart displaying continuous line points over 12 months representing company sales.</p>
+      <div class="visual-box">📈 Line showing continuous month-to-month growth</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p2q1', false, 'Column Chart', 'Line Chart is correct because it shows trends continuously over time (12 months).')">Column Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q1', true, 'Line Chart', '')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q1', false, 'Pie Chart', 'Line Chart is correct because Pie charts show parts of a whole, not continuous monthly trends.')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q1', false, 'Scatter Chart', 'Line Chart is correct because time-based data uses connected line points.')">Scatter Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="quiz-card" id="p2q2">
+      <p><strong>Question 2:</strong> Look at this chart split into sliced sections showing lunch preferences of a class.</p>
+      <div class="visual-box">🍕 Circular layout with 40% Pizza, 30% Burgers, 30% Pasta</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p2q2', false, 'Bar Chart', 'Pie Chart is correct because circular slices represent percentages of a whole.')">Bar Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q2', true, 'Pie Chart', '')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q2', false, 'Area Chart', 'Pie Chart is correct because Area charts do not show circular proportions.')">Area Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q2', false, 'Scatter Chart', 'Pie Chart is correct because it shows how parts relate to a whole 100%.')">Scatter Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="quiz-card" id="p2q3">
+      <p><strong>Question 3:</strong> A chart displaying vertical rectangular bars side-by-side to compare test scores of 4 subjects.</p>
+      <div class="visual-box">📊 Vertical bars for Math, Science, English, and History</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p2q3', true, 'Column Chart', '')">Column Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q3', false, 'Line Chart', 'Column Chart is correct because individual vertical bars compare distinct categories.')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q3', false, 'Pie Chart', 'Column Chart is correct because we are comparing individual subject scores, not parts of a whole.')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q3', false, 'Bar Chart', 'Column Chart is correct because vertical bars are Column charts (Bar charts use horizontal bars).')">Bar Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="quiz-card" id="p2q4">
+      <p><strong>Question 4:</strong> A chart showing individual data points scattered across X and Y axes representing study hours vs exam marks.</p>
+      <div class="visual-box">🌌 Scattered dots across numerical values with no lines connecting them</div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p2q4', false, 'Line Chart', 'Scatter Chart is correct because dots are not connected by lines; they show correlation between two numeric values.')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q4', false, 'Bar Chart', 'Scatter Chart is correct because it plots raw numeric coordinates, not categorical bars.')">Bar Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q4', true, 'Scatter Chart', '')">Scatter Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p2q4', false, 'Pie Chart', 'Scatter Chart is correct because it compares two sets of numerical values.')">Pie Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+  </div>
+
+  <!-- PART 3: SCENARIO CHALLENGE -->
+  <div id="part3" class="section">
+    <span class="time-badge">⏱️ Suggested Time: 8 to 10 Minutes</span>
+    <h2>Part 3: Choose the Right Chart for the Scenario</h2>
+    <div class="score-board" id="score-part3">Score: 0 / 4</div>
+
+    <!-- Scenario 1 -->
+    <div class="quiz-card" id="p3q1">
+      <p><strong>Scenario 1:</strong> You are tracking your heart rate every minute during a 10-minute running exercise. You want to see how your heart rate goes up and down over time.</p>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p3q1', true, 'Line Chart', '')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q1', false, 'Pie Chart', 'Line Chart is correct because tracking changes over time (continuous minutes) requires a Line chart.')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q1', false, 'Bar Chart', 'Line Chart is correct because continuous time data is best represented with connected lines.')">Bar Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q1', false, 'Scatter Chart', 'Line Chart is correct because time tracking follows a continuous sequential line.')">Scatter Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Scenario 2 -->
+    <div class="quiz-card" id="p3q2">
+      <p><strong>Scenario 2:</strong> A teacher wants to create a visual display showing what percentage of the school day is spent on Math, English, Science, Recess, and Art.</p>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p3q2', false, 'Column Chart', 'Pie Chart is correct because it represents breakdown percentages of a whole 100% (the school day).')">Column Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q2', true, 'Pie Chart', '')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q2', false, 'Line Chart', 'Pie Chart is correct because school day divisions show parts of a whole total.')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q2', false, 'Area Chart', 'Pie Chart is correct because the scenario asks for percentage distribution of a whole.')">Area Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Scenario 3 -->
+    <div class="quiz-card" id="p3q3">
+      <p><strong>Scenario 3:</strong> A sports teacher wants to compare the total number of gold medals won by 5 different houses in the school (Red House, Blue House, Green House, Yellow House, White House).</p>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p3q3', true, 'Column Chart', '')">Column Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q3', false, 'Line Chart', 'Column Chart is correct because we are comparing totals across separate categories (Houses).')">Line Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q3', false, 'Scatter Chart', 'Column Chart is correct because house categories are discrete, not continuous numbers.')">Scatter Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q3', false, 'Pie Chart', 'Column Chart is correct because the goal is to directly compare category totals side-by-side.')">Pie Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- Scenario 4 -->
+    <div class="quiz-card" id="p3q4">
+      <p><strong>Scenario 4:</strong> A scientist is analyzing 50 plants to see if there is a relationship between the amount of fertilizer given (in grams) and the height of the plant (in cm).</p>
+      <div class="options-grid">
+        <button class="option-btn" onclick="checkAnswer('p3q4', false, 'Pie Chart', 'Scatter Chart is correct because we are looking for a relationship between two sets of numbers (grams vs height).')">Pie Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q4', false, 'Bar Chart', 'Scatter Chart is correct because two numeric variables require X-Y plotting.')">Bar Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q4', true, 'Scatter Chart', '')">Scatter Chart</button>
+        <button class="option-btn" onclick="checkAnswer('p3q4', false, 'Column Chart', 'Scatter Chart is correct because it shows how one numeric variable affects another.')">Column Chart</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Tab Switching
+  function showPart(partId) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    
+    document.getElementById(partId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+  // Scoring Tracker
+  const scores = { part2: 0, part3: 0 };
+  const answered = {};
+
+  // Answer Checking Logic
+  function checkAnswer(questionId, isCorrect, correctName, explanation) {
+    const parentCard = document.getElementById(questionId);
+    const feedbackEl = parentCard.querySelector('.feedback');
+    const buttons = parentCard.querySelectorAll('.option-btn');
+
+    // Prevent re-scoring answered questions
+    if (!answered[questionId]) {
+      const part = questionId.startsWith('p2') ? 'part2' : 'part3';
+      if (isCorrect) {
+        scores[part]++;
+        document.getElementById(`score-${part}`).innerText = `Score: ${scores[part]} / 4`;
+      }
+      answered[questionId] = true;
+    }
+
+    // Disable buttons after selection
+    buttons.forEach(btn => btn.disabled = true);
+
+    // Render Feedback
+    if (isCorrect) {
+      feedbackEl.className = 'feedback correct';
+      feedbackEl.innerHTML = 'Good! 👍';
+    } else {
+      feedbackEl.className = 'feedback wrong';
+      feedbackEl.innerHTML = `Incorrect. ❌<br><strong>Correct Answer:</strong> ${correctName}<br><strong>Reason:</strong> ${explanation}`;
+    }
+  }
+</script>
+
+</body>
+</html>
