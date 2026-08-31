@@ -38,6 +38,428 @@
 
   <h1>📘 Grade 7</h1>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grade 7 | Computer Lab</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1e293b;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .header {
+            background: linear-gradient(135deg, #173f7a, #2563a6);
+            color: white;
+            text-align: center;
+            padding: 42px 20px 38px;
+        }
+
+        .school-icon {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 7px;
+            opacity: 0.95;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================== */
+
+        .container {
+            width: 92%;
+            max-width: 850px;
+            margin: 38px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .intro h2 {
+            font-size: 22px;
+            color: #173f7a;
+            margin-bottom: 7px;
+        }
+
+        .intro p {
+            font-size: 15px;
+            color: #64748b;
+        }
+
+        /* =========================
+           SUBJECT CARDS
+        ========================== */
+
+        .subject-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 22px;
+
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            border: 1px solid #dce5f0;
+
+            box-shadow: 0 5px 16px rgba(30, 64, 175, 0.08);
+
+            transition: all 0.25s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 22px rgba(30, 64, 175, 0.13);
+        }
+
+        /* Number */
+
+        .number {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            background: #173f7a;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+            font-weight: 700;
+
+            flex-shrink: 0;
+        }
+
+        /* Icon */
+
+        .subject-icon {
+            width: 68px;
+            height: 68px;
+
+            border-radius: 14px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 38px;
+
+            flex-shrink: 0;
+        }
+
+        .excel-icon {
+            background: #e8f6ee;
+        }
+
+        .word-icon {
+            background: #eaf2ff;
+        }
+
+        .ppt-icon {
+            background: #fff3e8;
+        }
+
+        /* Subject information */
+
+        .subject-info {
+            flex: 1;
+        }
+
+        .subject-info h3 {
+            font-size: 23px;
+            color: #173f7a;
+            margin-bottom: 5px;
+        }
+
+        .subject-info p {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* Button */
+
+        .open-btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #173f7a;
+            color: white;
+
+            padding: 12px 20px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            transition: background 0.2s ease;
+        }
+
+        .open-btn:hover {
+            background: #0f2f5c;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+            text-align: center;
+
+            margin-top: 15px;
+
+            padding: 22px 10px 35px;
+
+            font-size: 13px;
+
+            color: #94a3b8;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 650px) {
+
+            .header {
+                padding: 32px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header h2 {
+                font-size: 16px;
+            }
+
+            .subject-card {
+                flex-wrap: wrap;
+                padding: 22px;
+            }
+
+            .subject-info {
+                min-width: calc(100% - 145px);
+            }
+
+            .open-btn {
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="school-icon">💻</div>
+
+        <h1>Grade 7 Computer Lab</h1>
+
+        <h2>Worksheets &amp; Activities</h2>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container">
+
+
+        <div class="intro">
+
+            <h2>Learning Resources</h2>
+
+            <p>
+                Select a subject to access the worksheets and activities.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             1. MS EXCEL
+        ========================== -->
+
+        <div class="subject-card">
+
+            <div class="number">
+                1
+            </div>
+
+
+            <div class="subject-icon excel-icon">
+                📊
+            </div>
+
+
+            <div class="subject-info">
+
+                <h3>MS Excel</h3>
+
+                <p>
+                    Worksheets, spreadsheet activities and practical tasks.
+                </p>
+
+            </div>
+
+
+            <a href="MS-Excel/index.html" class="open-btn">
+                Open Resources →
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             2. MS WORD
+        ========================== -->
+
+        <div class="subject-card">
+
+            <div class="number">
+                2
+            </div>
+
+
+            <div class="subject-icon word-icon">
+                📝
+            </div>
+
+
+            <div class="subject-info">
+
+                <h3>MS Word</h3>
+
+                <p>
+                    Worksheets, document-formatting activities and practice tasks.
+                </p>
+
+            </div>
+
+
+            <a href="MS-Word/index.html" class="open-btn">
+                Open Resources →
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             3. MS POWERPOINT
+        ========================== -->
+
+        <div class="subject-card">
+
+            <div class="number">
+                3
+            </div>
+
+
+            <div class="subject-icon ppt-icon">
+                📽️
+            </div>
+
+
+            <div class="subject-info">
+
+                <h3>MS PowerPoint</h3>
+
+                <p>
+                    Presentation worksheets, slide activities and creative tasks.
+                </p>
+
+            </div>
+
+
+            <a href="MS-PowerPoint/index.html" class="open-btn">
+                Open Resources →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        Grade 7 • Computer Learning Resources
+
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+  
   <a href="MS%20Excel/" 
      style="display:inline-block;
           width:220px;
