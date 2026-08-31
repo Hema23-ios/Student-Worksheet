@@ -38,160 +38,284 @@
 
   <h1>📘 Grade 7</h1>
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   
+    <title>Grade 7 - Computer Activities</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            padding: 28px 20px 22px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #173f7a;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #64748b;
+        }
+
+        /* Main container */
+        .container {
+            width: 92%;
+            max-width: 750px;
+            margin: 35px auto;
+        }
+
+        /* Section title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 21px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        /* Subject card */
+        .subject-card {
+            background: #ffffff;
+            border: 1px solid #dbe4f0;
+            border-radius: 14px;
+            padding: 22px 25px;
+            margin-bottom: 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.07);
+
+            transition: 0.2s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(30, 64, 175, 0.12);
+        }
+
+        /* Left side */
+        .subject-info {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .number {
+            width: 42px;
+            height: 42px;
+            background: #173f7a;
+            color: white;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            font-size: 32px;
+        }
+
+        .subject-text h3 {
+            font-size: 21px;
+            color: #173f7a;
+            margin-bottom: 4px;
+        }
+
+        .subject-text p {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* Button */
+        .open-btn {
+            text-decoration: none;
+            background: #173f7a;
+            color: white;
+
+            padding: 11px 18px;
+            border-radius: 7px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            transition: 0.2s ease;
+        }
+
+        .open-btn:hover {
+            background: #0f2f5c;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+            padding: 15px 10px 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .header h1 {
+                font-size: 27px;
+            }
+
+            .subject-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .subject-info {
+                justify-content: flex-start;
+            }
+
+            .open-btn {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>📘 Grade 7</h1>
+        <p>Computer Worksheets & Activities</p>
+    </header>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
-
+    <!-- Main Content -->
     <main class="container">
 
-
-        <div class="intro">
-
+        <div class="section-title">
             <h2>Learning Resources</h2>
-
-            <p>
-                Select a subject to access the worksheets and activities.
-            </p>
-
         </div>
 
 
-
-        <!-- =========================
-             1. MS EXCEL
-        ========================== -->
-
+        <!-- 1. MS Excel -->
         <div class="subject-card">
-
-            <div class="number">
-                1
-            </div>
-
-
-            <div class="subject-icon excel-icon">
-                📊
-            </div>
-
 
             <div class="subject-info">
 
-                <h3>MS Excel</h3>
+                <div class="number">1</div>
 
-                <p>
-                    Worksheets, spreadsheet activities and practical tasks.
-                </p>
+                <div class="icon">📊</div>
+
+                <div class="subject-text">
+                    <h3>MS Excel</h3>
+                    <p>Worksheets & Activities</p>
+                </div>
 
             </div>
 
-
-            <a href="MS-Excel/index.html" class="open-btn">
+            <!-- CHANGE THIS LINK -->
+            <a href="MS%20Excel/index.html" class="open-btn">
                 Open Resources →
             </a>
 
         </div>
 
 
-
-        <!-- =========================
-             2. MS WORD
-        ========================== -->
-
+        <!-- 2. MS Word -->
         <div class="subject-card">
-
-            <div class="number">
-                2
-            </div>
-
-
-            <div class="subject-icon word-icon">
-                📝
-            </div>
-
 
             <div class="subject-info">
 
-                <h3>MS Word</h3>
+                <div class="number">2</div>
 
-                <p>
-                    Worksheets, document-formatting activities and practice tasks.
-                </p>
+                <div class="icon">📝</div>
+
+                <div class="subject-text">
+                    <h3>MS Word</h3>
+                    <p>Worksheets & Activities</p>
+                </div>
 
             </div>
 
-
-            <a href="MS-Word/index.html" class="open-btn">
+            <!-- CHANGE THIS LINK -->
+            <a href="MS%20Word/index.html" class="open-btn">
                 Open Resources →
             </a>
 
         </div>
 
 
-
-        <!-- =========================
-             3. MS POWERPOINT
-        ========================== -->
-
+        <!-- 3. MS PowerPoint -->
         <div class="subject-card">
-
-            <div class="number">
-                3
-            </div>
-
-
-            <div class="subject-icon ppt-icon">
-                📽️
-            </div>
-
 
             <div class="subject-info">
 
-                <h3>MS PowerPoint</h3>
+                <div class="number">3</div>
 
-                <p>
-                    Presentation worksheets, slide activities and creative tasks.
-                </p>
+                <div class="icon">📽️</div>
+
+                <div class="subject-text">
+                    <h3>MS PowerPoint</h3>
+                    <p>Worksheets & Activities</p>
+                </div>
 
             </div>
 
-
-            <a href="MS-PowerPoint/index.html" class="open-btn">
+            <!-- CHANGE THIS LINK -->
+            <a href="MS%20PowerPoint/index.html" class="open-btn">
                 Open Resources →
             </a>
 
         </div>
-
 
     </main>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- Footer -->
     <footer class="footer">
-
         Grade 7 • Computer Learning Resources
-
     </footer>
 
-
 </body>
-
 </html>
 
 
 
-
-
+  
 
   
   <a href="MS%20Excel/" 
