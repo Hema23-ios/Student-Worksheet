@@ -1,33 +1,149 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Grade 6 - Student Worksheets</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fc;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .header {
+            background: #2e75b6;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: 220px;
+            padding: 25px 20px;
+            background: white;
+            border: 1px solid #b8d4f5;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #1a5dab;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+
+        .icon {
+            font-size: 45px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 12px 0 8px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 35px;
+            color: #2e75b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
-<body> 
+<body>
 
-  <h1>📘 Grade 6 – Computer Worksheets</h1>
+    <div class="header">
+        <h1>📘 Grade 6</h1>
+        <p>Computer Worksheets & Activities</p>
+    </div>
 
-   <!-- MS Excel -->
-        <div class="subject-card">
+    <div class="container">
 
-            <div class="subject-info">
+        <div class="cards">
 
-                <div class="number">1</div>
+            <!-- MS Excel -->
+            <a href="MS%20Excel/" class="card">
 
                 <div class="icon">📊</div>
 
-                <div class="subject-text">
-                    <h3>MS Excel</h3>
-                    <p>Worksheets & Activities</p>
-                </div>
+                <h2>MS Excel</h2>
 
-            </div>
+                <p>
+                    Worksheets & Activities
+                </p>
+
+            </a>
+
+            <!-- MS Word -->
+            <a href="MS%20Word/" class="card">
+
+                <div class="icon">📝</div>
+
+                <h2>MS Word</h2>
+
+                <p>
+                    Worksheets & Activities
+                </p>
+
+            </a>
+
+            <!-- MS PowerPoint -->
+            <a href="MS%20PowerPoint/" class="card">
+
+                <div class="icon">📽️</div>
+
+                <h2>MS PowerPoint</h2>
+
+                <p>
+                    Worksheets & Activities
+                </p>
+
+            </a>
 
         </div>
-  
-  <p><a href="../index.html">⬅ Back to Home</a></p>
+
+        <!-- Back to Main Website -->
+        <a href="../" class="back">
+            ⬅ Back to Main Page
+        </a>
+
+    </div>
 
 </body>
 </html>
-
