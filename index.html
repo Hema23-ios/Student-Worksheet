@@ -4,51 +4,368 @@
   <meta charset="UTF-8">
   <title>Student Worksheets</title>
   
- <header class="header">
-  <div class="school-brand">
-    <img src="christel-house-logo.png"
-         alt="Christel House India Logo">
+<header class="header">
+    <div class="school-brand">
+        <!-- Christel House-inspired emblem -->
+        <svg class="school-logo" viewBox="0 0 100 100"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M49 10 A40 40 0 1 0 49 90
+                     L49 68 A18 18 0 1 1 49 32 Z"
+                  fill="#F7941D"/>
+            <path d="M49 42 L72 24 L94 42
+                     L94 83 L49 83 Z"
+                  fill="#39A5D6"/>
+            <path d="M61 45 L72 36 L83 45"
+                  fill="none" stroke="white"
+                  stroke-width="4"/>
+            <path d="M70 49 L70 70"
+                  stroke="white" stroke-width="4"/>
+        </svg>
 
-    <div class="school-name">
-      <h1>Christel House India</h1>
-      <p>BANGALORE</p>
+        <div class="school-name">
+            <h1>Christel House India</h1>
+            <p>BANGALORE</p>
+        </div>
     </div>
-  </div>
 
-  <h2>Student Worksheet Portal</h2>
-  <p class="subtitle">
-    Access your grade-wise computer worksheets
-  </p>
+    <p class="subtitle">
+        Student Worksheet Portal
+    </p>
 </header>
-
-  .school-brand {
+  
+.school-brand {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    margin-bottom: 25px;
+    gap: 16px;
+    margin-bottom: 15px;
 }
 
-.school-brand img {
-    width: 85px;
-    height: 85px;
-    object-fit: contain;
+.school-logo {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
 }
 
 .school-name h1 {
     color: #F39200;
-    font-size: 36px;
+    font-size: 38px;
     margin: 0;
 }
 
 .school-name p {
-    color: #42A5D5;
+    color: #3298CC;
     font-size: 12px;
+    font-weight: 700;
     letter-spacing: 4px;
-    font-weight: bold;
+    margin-top: 5px;
 }
 
-.header h2 {
-    color: #303B49;
-    margin-bottom: 10px;
+@media (max-width: 500px) {
+    .school-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .school-name h1 {
+        font-size: 25px;
+    }
 }
+
+  
+!DOCTYPE html>
+html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christel House India | Student Worksheets</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #202124;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+    color: #263238;
+}
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 55px 50px 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+}
+
+/* Decorative top accent */
+.top-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(90deg,
+        #ff9d00, #ffbd4a, #f07820);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background: #fff3df;
+    border-radius: 16px;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    color: #f39200;
+    font-size: 42px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #59636e;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9a9a9a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grade cards */
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grade-card {
+    text-decoration: none;
+    background: #f5f6f8;
+    border: 1px solid #e7e8eb;
+    border-radius: 15px;
+    min-height: 105px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #273442;
+}
+
+.grade-card:hover {
+    background: #fff8ed;
+    border-color: #f5b84f;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(243,146,0,0.12);
+}
+
+.folder {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #e89112;
+    font-size: 24px;
+}
+
+.grade-info {
+    flex: 1;
+}
+
+.grade-info h2 {
+    font-size: 18px;
+    font-weight: 650;
+    margin-bottom: 5px;
+}
+
+.grade-info p {
+    font-size: 12px;
+    color: #858b93;
+}
+
+.arrow {
+    font-size: 20px;
+    color: #a5a5a5;
+    transition: 0.3s;
+}
+
+.grade-card:hover .arrow {
+    color: #e89112;
+    transform: translateX(4px);
+}
+
+.footer {
+    margin-top: 42px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #929292;
+}
+
+.footer strong {
+    color: #e89112;
+}
+
+/* Responsive design */
+@media (max-width: 750px) {
+    .container {
+        padding: 40px 22px 25px;
+    }
+
+    .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .grade-card {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .grade-info h2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        justify-content: center;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-accent"></div>
+
+    <header class="header">
+        <div class="logo">📚</div>
+
+        <h1>Christel House India</h1>
+
+        <p class="subtitle">
+            Welcome to the Student Worksheet Portal
+        </p>
+    </header>
+
+    <div class="section-label">
+        EXPLORE YOUR LEARNING RESOURCES
+    </div>
+
+    <div class="grade-grid">
+
+        <a href="GRADE_3_LINK" class="grade-card">
+            <div class="folder">📁</div>
+            <div class="grade-info">
+                <h2>Grade 3</h2>
+                <p>Computer Worksheets</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="GRADE_5_LINK" class="grade-card">
+            <div class="folder">📁</div>
+            <div class="grade-info">
+                <h2>Grade 5</h2>
+                <p>Computer Worksheets</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="GRADE_6_LINK" class="grade-card">
+            <div class="folder">📁</div>
+            <div class="grade-info">
+                <h2>Grade 6</h2>
+                <p>Computer Worksheets</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="GRADE_7_LINK" class="grade-card">
+            <div class="folder">📁</div>
+            <div class="grade-info">
+                <h2>Grade 7</h2>
+                <p>Computer Worksheets</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="STARS_1_LINK" class="grade-card">
+            <div class="folder">📁</div>
+            <div class="grade-info">
+                <h2>Stars 1</h2>
+                <p>Computer Worksheets</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+    </div>
+
+    <footer class="footer">
+        <p><strong>Christel House India</strong> | Computer Learning Resources</p>
+        <p>Learning • Exploring • Creating ✨</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
+  
+
+  
