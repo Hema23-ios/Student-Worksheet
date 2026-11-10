@@ -3,70 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Student Worksheets</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      min-height: 100vh;
-    }
+  
+ <header class="header">
+  <div class="school-brand">
+    <img src="christel-house-logo.png"
+         alt="Christel House India Logo">
 
-    h1 {
-      text-align: center;
-      padding: 30px 10px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.15);
-      padding: 30px;
-      border-radius: 12px;
-      width: 200px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>📚 Student Worksheet</h1>
-
-  <div class="container">
-    <div class="card">
-      <a href="Grade%203/">Grade 3</a>
-    </div>
-    <div class="card">
-      <a href="Grade%205/">Grade 5</a>
-    </div>
-    <div class="card">
-      <a href="Grade%206/">Grade 6</a>
-    </div>
-    <div class="card">
-      <a href="Grade%207/">Grade 7</a>
-    </div>
-     <div class="card">
-      <a href="Stars%201/">Stars 1</a>
+    <div class="school-name">
+      <h1>Christel House India</h1>
+      <p>BANGALORE</p>
     </div>
   </div>
 
-</body>
-</html>
+  <h2>Student Worksheet Portal</h2>
+  <p class="subtitle">
+    Access your grade-wise computer worksheets
+  </p>
+</header>
+
+  .school-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.school-brand img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.school-name h1 {
+    color: #F39200;
+    font-size: 36px;
+    margin: 0;
+}
+
+.school-name p {
+    color: #42A5D5;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.header h2 {
+    color: #303B49;
+    margin-bottom: 10px;
+}
