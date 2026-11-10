@@ -1,70 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Student Worksheets</title>
-<header class="header">
-  <div class="school-brand">
-    <img src="christel-house-logo.png"
-         alt="Christel House India Logo">
-
-    <div class="school-name">
-      <h1>Christel House India</h1>
-      <p>BANGALORE</p>
-    </div>
-  </div>
-
-  <h2>Student Worksheet Portal</h2>
-  <p class="subtitle">
-    Access your grade-wise computer worksheets
-  </p>
-</header>
-.school-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 15px;
-}
-
-.school-logo {
-    width: 75px;
-    height: 75px;
-    flex-shrink: 0;
-}
-
-.school-name h1 {
-    color: #F39200;
-    font-size: 38px;
-    margin: 0;
-}
-
-.school-name p {
-    color: #3298CC;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-top: 5px;
-}
-
-@media (max-width: 500px) {
-    .school-logo {
-        width: 55px;
-        height: 55px;
-    }
-
-    .school-name h1 {
-        font-size: 25px;
-    }
-}
-
-  
-!DOCTYPE html>
-html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christel House India | Student Worksheets</title>
+
+<title>Christel House India | Student Worksheet Portal</title>
 
 <style>
 * {
@@ -74,200 +15,208 @@ html lang="en">
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #202124;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #222222;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 45px 20px;
-    color: #263238;
+    justify-content: center;
+    padding: 25px 20px;
 }
 
+/* Main panel */
 .container {
     width: 100%;
-    max-width: 1150px;
+    max-width: 1100px;
     background: #ffffff;
-    border-radius: 25px;
-    padding: 55px 50px 35px;
+    border-radius: 26px;
+    padding: 38px 48px 27px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.20);
 }
 
-/* Decorative top accent */
-.top-accent {
+/* School-colour accent */
+.top-line {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 7px;
-    background: linear-gradient(90deg,
-        #ff9d00, #ffbd4a, #f07820);
+    height: 6px;
+    background: linear-gradient(
+        to right,
+        #F7941D 50%,
+        #43A9DB 50%
+    );
 }
 
+/* Header */
 .header {
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 29px;
 }
 
-.logo {
-    display: inline-flex;
+.school-brand {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: #fff3df;
-    border-radius: 16px;
-    font-size: 28px;
-    margin-bottom: 14px;
+    gap: 13px;
+    margin-bottom: 13px;
 }
 
-h1 {
-    color: #f39200;
-    font-size: 42px;
+.school-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.school-name {
+    text-align: left;
+}
+
+.school-name h1 {
+    font-size: 36px;
+    color: #F39200;
     font-weight: 750;
-    letter-spacing: -1px;
-    margin-bottom: 12px;
+    letter-spacing: -0.8px;
 }
 
-.subtitle {
-    color: #59636e;
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.section-label {
-    font-size: 12px;
+.school-name p {
+    font-size: 10px;
+    color: #329ACF;
     font-weight: 700;
-    letter-spacing: 2px;
-    color: #9a9a9a;
-    text-align: center;
-    margin-bottom: 20px;
+    letter-spacing: 4px;
+    margin-top: 3px;
+}
+
+.portal-title {
+    color: #303D4B;
+    font-size: 22px;
+    font-weight: 650;
+    margin-bottom: 9px;
+}
+
+.instruction {
+    color: #555E68;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* Grade cards */
 .grade-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
 }
 
 .grade-card {
-    text-decoration: none;
-    background: #f5f6f8;
-    border: 1px solid #e7e8eb;
+    min-height: 91px;
+    background: #F0F0F0;
+    border: 1px solid #DDDDDD;
     border-radius: 15px;
-    min-height: 105px;
-    padding: 20px;
     display: flex;
     align-items: center;
-    gap: 18px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    color: #273442;
+    padding: 15px 23px;
+    text-decoration: none;
+    color: #293746;
+    transition: all 0.25s ease;
+}
+
+.folder-icon {
+    width: 27px;
+    height: 27px;
+    color: #333333;
+    flex-shrink: 0;
+}
+
+.grade-name {
+    flex: 1;
+    text-align: center;
+    padding-right: 27px;
+    font-size: 20px;
+    font-weight: 650;
 }
 
 .grade-card:hover {
-    background: #fff8ed;
-    border-color: #f5b84f;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(243,146,0,0.12);
+    background: #FFF7EA;
+    border-color: #F3A52F;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.08);
 }
 
-.folder {
-    width: 48px;
-    height: 48px;
-    background: #ffffff;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #e89112;
-    font-size: 24px;
+.grade-card:hover .folder-icon {
+    color: #E89112;
 }
 
-.grade-info {
-    flex: 1;
+.grade-card:hover .grade-name {
+    color: #D98500;
 }
 
-.grade-info h2 {
-    font-size: 18px;
-    font-weight: 650;
-    margin-bottom: 5px;
-}
-
-.grade-info p {
-    font-size: 12px;
-    color: #858b93;
-}
-
-.arrow {
-    font-size: 20px;
-    color: #a5a5a5;
-    transition: 0.3s;
-}
-
-.grade-card:hover .arrow {
-    color: #e89112;
-    transform: translateX(4px);
-}
-
+/* Footer */
 .footer {
-    margin-top: 42px;
-    border-top: 1px solid #eeeeee;
-    padding-top: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.footer p {
-    font-size: 12px;
+    border-top: 1px solid #EEEEEE;
+    margin-top: 27px;
+    padding-top: 17px;
+    text-align: center;
     color: #929292;
+    font-size: 12px;
 }
 
 .footer strong {
-    color: #e89112;
+    color: #E89112;
 }
 
-/* Responsive design */
+/* Tablet */
 @media (max-width: 750px) {
     .container {
-        padding: 40px 22px 25px;
+        padding: 38px 25px 25px;
     }
 
     .grade-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 13px;
     }
 
-    h1 {
-        font-size: 32px;
-    }
-
-    .grade-card {
-        padding: 14px;
-        gap: 10px;
-    }
-
-    .grade-info h2 {
-        font-size: 15px;
+    .school-name h1 {
+        font-size: 29px;
     }
 }
 
-@media (max-width: 450px) {
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 35px 17px 23px;
+    }
+
+    .school-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .school-name h1 {
+        font-size: 22px;
+    }
+
+    .portal-title {
+        font-size: 19px;
+    }
+
+    .instruction {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
     .grade-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer {
-        justify-content: center;
-        text-align: center;
+    .grade-card {
+        min-height: 80px;
     }
 }
 </style>
@@ -277,81 +226,122 @@ h1 {
 
 <div class="container">
 
-    <div class="top-accent"></div>
+    <div class="top-line"></div>
 
+    <!-- CHRISTEL HOUSE INDIA HEADER -->
     <header class="header">
-        <div class="logo">📚</div>
 
-        <h1>Christel House India</h1>
+        <div class="school-brand">
 
-        <p class="subtitle">
-            Welcome to the Student Worksheet Portal
+            <img
+                src="christel-house-logo.png"
+                alt="Christel House India Logo"
+                class="school-logo"
+            >
+
+            <div class="school-name">
+                <h1>Christel House India</h1>
+                <p>BANGALORE</p>
+            </div>
+
+        </div>
+
+        <h2 class="portal-title">
+            Student Worksheet Portal
+        </h2>
+
+        <p class="instruction">
+            Click the links below to access your grade resources:
         </p>
+
     </header>
 
-    <div class="section-label">
-        EXPLORE YOUR LEARNING RESOURCES
-    </div>
 
-    <div class="grade-grid">
+    <!-- GRADE-WISE WORKSHEET FOLDERS -->
+    <main class="grade-grid">
 
-        <a href="GRADE_3_LINK" class="grade-card">
-            <div class="folder">📁</div>
-            <div class="grade-info">
-                <h2>Grade 3</h2>
-                <p>Computer Worksheets</p>
-            </div>
-            <span class="arrow">›</span>
+        <a href="https://github.com/Hema23-ios/Student-Worksheet/tree/main/Grade%203"
+           class="grade-card">
+
+            <svg class="folder-icon" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+
+            <span class="grade-name">Grade 3</span>
         </a>
 
-        <a href="GRADE_5_LINK" class="grade-card">
-            <div class="folder">📁</div>
-            <div class="grade-info">
-                <h2>Grade 5</h2>
-                <p>Computer Worksheets</p>
-            </div>
-            <span class="arrow">›</span>
+
+        <a href="https://github.com/Hema23-ios/Student-Worksheet/tree/main/Grade%205"
+           class="grade-card">
+
+            <svg class="folder-icon" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+
+            <span class="grade-name">Grade 5</span>
         </a>
 
-        <a href="GRADE_6_LINK" class="grade-card">
-            <div class="folder">📁</div>
-            <div class="grade-info">
-                <h2>Grade 6</h2>
-                <p>Computer Worksheets</p>
-            </div>
-            <span class="arrow">›</span>
+
+        <a href="https://github.com/Hema23-ios/Student-Worksheet/tree/main/Grade%206"
+           class="grade-card">
+
+            <svg class="folder-icon" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+
+            <span class="grade-name">Grade 6</span>
         </a>
 
-        <a href="GRADE_7_LINK" class="grade-card">
-            <div class="folder">📁</div>
-            <div class="grade-info">
-                <h2>Grade 7</h2>
-                <p>Computer Worksheets</p>
-            </div>
-            <span class="arrow">›</span>
+
+        <a href="https://github.com/Hema23-ios/Student-Worksheet/tree/main/Grade%207"
+           class="grade-card">
+
+            <svg class="folder-icon" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+
+            <span class="grade-name">Grade 7</span>
         </a>
 
-        <a href="STARS_1_LINK" class="grade-card">
-            <div class="folder">📁</div>
-            <div class="grade-info">
-                <h2>Stars 1</h2>
-                <p>Computer Worksheets</p>
-            </div>
-            <span class="arrow">›</span>
+
+        <a href="https://github.com/Hema23-ios/Student-Worksheet/tree/main/Stars%201"
+           class="grade-card">
+
+            <svg class="folder-icon" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+
+            <span class="grade-name">Stars 1</span>
         </a>
 
-    </div>
+    </main>
 
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <p><strong>Christel House India</strong> | Computer Learning Resources</p>
-        <p>Learning • Exploring • Creating ✨</p>
+        <p>
+            <strong>Christel House India</strong>
+            &nbsp; | &nbsp;
+            Learning • Exploring • Creating
+        </p>
     </footer>
 
 </div>
 
 </body>
 </html>
-
-  
-
-  
